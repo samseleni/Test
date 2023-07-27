@@ -1,0 +1,12 @@
+.title {
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px;
+    align-items: center;
+    list-style: none;
+}
