@@ -1,3 +1,7 @@
+export type RootState = {
+  
+}
+
 export type TResult = {
   name: string,
   url: string
