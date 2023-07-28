@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./styles.scss";
 
 type PropTypes = {
@@ -6,7 +7,9 @@ type PropTypes = {
   }
 const PokemonItem = ({name}: PropTypes) => {
     return(
-        <div className='item'>{name}</div>
+        <Link className='link-item' to={`/${name}`}>
+            <div className='item'>{name}</div>
+        </Link>
     )
 }
 

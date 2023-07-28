@@ -3,16 +3,17 @@ import "./styles.scss";
 import PokemonItem from "../PokemonItem/PokemonItem";
 import { useGetPokemonsQuery } from "../../redux/pokemonsApi";
 import { useSelector } from "react-redux";
+import { TResult } from "../../redux/types";
 
 const PokemonList = () => {
-  const { data = [], isLoading } = useGetPokemonsQuery();
+  // const count = useSelector((state: any) => console.log(state));
+  const { data, isLoading } = useGetPokemonsQuery();
   if (isLoading) return <h1>Loading...</h1>;
-  // const count = useSelector((state: RootState) => console.log(state))
   return (
     <>
       <h1 className="title">Покемоны</h1>
       <ul className="list">
-        {data.results.map((item: { name: string }) => {
+        {data && data.results.map((item: TResult) => {
           return (
             <li key={item.name}>
               <PokemonItem name={item.name} />
