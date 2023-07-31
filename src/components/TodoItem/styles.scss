@@ -1,0 +1,39 @@
+.todo-item {
+  width: 400px;
+  padding: 15px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .completed {
+    text-decoration: line-through;
+  }
+  .delete {
+    margin-left: auto;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .checkbox + label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .checkbox + label::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid #adb5bd;
+    cursor: pointer;
+  }
+  .checkbox:checked + label::before {
+    background: rgb(158,170,196);
+  }
+}

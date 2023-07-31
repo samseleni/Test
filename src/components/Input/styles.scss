@@ -1,0 +1,20 @@
+.input {
+  width: 400px;
+  margin-right: 10px;
+}
+
+.input, .button {
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.button {
+  transition: 0.3s;
+}
+
+.button { 
+  background: rgb(182, 180, 180); 
+  cursor: pointer;
+  &:hover {transform: scale(1.1);}
+}
