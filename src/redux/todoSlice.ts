@@ -29,6 +29,9 @@ const todoSlice = createSlice({
             const toggledTodo = state.todos.find(todo => todo.id === action.payload);
             if (toggledTodo) {
                 toggledTodo.completed = !toggledTodo.completed;
+                // для добавления в Completed/Todo в порядке изменения состояния 
+                state.todos = state.todos.filter(todo => todo.id !== action.payload);
+                state.todos.push(toggledTodo);
             }
         },
         removeTodo(state, action: PayloadAction<string>) {
