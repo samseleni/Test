@@ -7,7 +7,7 @@ type PropTypes = {
   }
 const PokemonItem = ({name}: PropTypes) => {
     return(
-        <Link className='link-item' to={`/${name}`}>
+        <Link className='link-item' to={`/pokemons/${name}`}>
             <div className='item'>{name}</div>
         </Link>
     )

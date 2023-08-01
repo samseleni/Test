@@ -1,0 +1,10 @@
+.buttons {
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+    justify-content: center;
+    .btn {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+}
